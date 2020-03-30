@@ -5,26 +5,49 @@
 1. Write a function named `hiWorld` that prints 'hello world' to the console
 
 ```javascript
+
+function hiWorld(){
+  console.log('hiWorld')
+}
 ```
 
 2. Write the same function from above in 2 other ways using different syntax
 
 ```javascript
+let string = 'hiWorld'
+function hello(hiWorld){
+  console.log(hiWorld)
+}
+hello(string)
 ```
 
 3. Write a function that accepts a 'name' parameter and prints "Hi, my name is `<name>`" to the console
 
 ```javascript
+let name = 'Terry'
+function hello(Terry){
+  console.log("Hi, my name is " +Terry)
+}
+hello(name)
 ```
 
 4. Write a funtion that accepts 2 numbers as parameters and returns their sum
 
 ```javascript
+function number(num1, num2){
+  return num1 + num2
+}
+number(4, 5)
 ```
 
 5. Write a function that accepts a number as a parameter returns the double of it
 
 ```javascript
+function number(num1){
+  return num1 * num1 
+}
+number(4)
+
 ```
 
 6. Write a function called `logger` that accepts a string as a parameter and then passes that string to `console.log`. Use `logger` as a callback to console.log each element in the array below. 
@@ -33,12 +56,26 @@
 let stringArray = ["JavaScript", "is pretty", "cool", "I guess."]
 
 // put answer here
+function logger(stringArray){
+  for(let x = 0; x <= stringArray.length; x++ ){
+    console.log(stringArray[x])
+  } 
+}
 ```
 
 7. Write a function that accepts a number as a parameter and prints "❌ You're too young to enter the clurb! ❌" if the parameter 
 is less than 21 and "🤡 Welcome to the clurb! 🚀" if the parameter is 21 or over
 
 ```javascript
+
+function ageChecker(num){
+     if (num < 21) {
+       console.log("❌ You're too young to enter the clurb! ❌")   
+       } else { console.log("🤡 Welcome to the clurb! 🚀")
+     }}
+     ageChecker(20)
+     ageChecker(22)
+
 ```
 
 8. Modify the above function to allow an underage patron in if they have a fake id
